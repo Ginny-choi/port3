@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window popup</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="popWrap">      
+            <div class="gap">
+                <div class="container">
+                        <div class="content">
+                            <img src="./img/210608_popup_pamschoice.jpg" alt="popup">
+                        
+                         <div class="button-box">
+                            <form name="buttonForm">
+                            <span>
+                                <input type="checkbox" name="check" id="chk">
+                                <label for="chk">3일동안 열리지 않음</label>
+                            </span>
+                            <button class="close-btn">닫기</button>
+
+                            </form>
+                        </div>            
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var $closeBtn = document.querySelector('.close-btn');
+        var today = null;
+        var txt = '';
+
+        function setCookieFn(name,value,expires){
+            today = new Date();
+            today.setDate( today.getDate() + expires);
+
+            txt += name + '=' + value + ';';
+            txt += 'expires=' + today.toUTCString() +';';
+            document.cookie = txt ;
+            console.log(txt);
+
+        }
+        $closeBtn.addEventListener('click', function(event){
+            event.preventDefault();
+            if( buttonForm.check.checked){
+                setCookieFn('popup_20210528','no',3);
+            }
+            self.close();
+        });
+    </script>
+   
+</body>
+</html>
