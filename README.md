@@ -71,9 +71,12 @@
 
 ![게시판](https://user-images.githubusercontent.com/77954029/126534147-f20c5bf1-6703-48f8-8f6e-3fb250b17614.gif)
 
+- json 파일을 사용하여 ajax로 게시판 구현
+- 목록 버튼을 누를시 새로운 데이터를 추출한다
+
+
 
 ![그누보드](https://user-images.githubusercontent.com/77954029/126534115-574730df-a49c-4775-81ec-e0d462b4cff2.png)
 
-- json 파일을 사용하여 ajax로 게시판 구현
-- 목록 버튼을 누를시 새로운 데이터를 추출한다
 - 게시판의 뉴스레터는 그누보드를 활용함
+- css 스타일 수정
